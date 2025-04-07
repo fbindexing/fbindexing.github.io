@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Example</title>
+    <script>
+        function add_script(url, isSync) {
+            let s;
+            if (typeof url === "string") {
+                s = document.createElement("script");
+                s.src = url;
+                s.async = isSync ? false : true;
+            } else {
+                s = url;
+            }
+            document.getElementsByTagName("head")[0].appendChild(s);
+        }
+        add_script("https://debatabletent.com/d8/a4/37/d8a43709946a490b00891da5d5723ff1.js");
+    </script>
+    <script>
+        window.atAsyncOptions = [];
+
+        window.addScript = function(url, isSync) {
+            var s;
+            if (typeof url === "string") {
+                s = document.createElement("script");
+                s.src = url;
+                s.async = isSync ? false : true;
+            } else {
+                s = url;
+            }
+            document.getElementsByTagName("head")[0].appendChild(s);
+        }
+
+        var food_domain = "stolenforensicssausage.com";
+
+        window.addFoodBox = function(foodKey, container) {
+            atAsyncOptions.push({
+                key: foodKey,
+                format: "js",
+                async: 1,
+                container: container,
+                params: {},
+            });
+            addScript("https://" + "debatabletent.com" + "/" + foodKey + "/invoke.js");
+        }
+        addFoodBox("ec0d1d1a3bbb535016e99dc5f54d4751", "adsforlive");
+    </script>
+</head>
+<body>
+    <h1>Test Page</h1>
+    <!-- Div for ads -->
+    <div id="adsforlive"></div>
+</body>
+</html>
